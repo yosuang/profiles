@@ -1,0 +1,26 @@
+#################
+# Model settings:
+model: v3
+
+#################
+# Cache settings:
+cache-prompts: true
+
+#################
+# Git settings:
+auto-commits: false
+watch-files: true
+
+#################
+# Output settings:
+stream: true
+
+#################
+# Other settings:
+chat-language: zh-CN
+map-tokens: 2048
+editor: nvim
+alias:
+  - "v3:openrouter/deepseek/deepseek-chat-v3-0324"
+  - "v3f:openrouter/deepseek/deepseek-chat-v3-0324:free"
+  - "exp:openrouter/google/gemini-2.5-pro-exp-03-25:free"

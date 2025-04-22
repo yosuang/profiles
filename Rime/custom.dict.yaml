@@ -1,0 +1,10 @@
+# Rime dictionary
+# encoding: utf-8
+#
+#
+---
+name: custom
+version: "2023-12-11"
+sort: by_weight
+---
+
