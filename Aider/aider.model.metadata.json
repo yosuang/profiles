@@ -27,5 +27,14 @@
     "supported_modalities": ["text", "image", "audio", "video"],
     "supported_output_modalities": ["text"],
     "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+  },
+  "openrouter/qwen/qwen3-235b-a22b:free": {
+    "max_tokens": 38912,
+    "max_input_tokens": 38912,
+    "max_output_tokens": 38912,
+    "input_cost_per_token": 0,
+    "output_cost_per_token": 0,
+    "litellm_provider": "openrouter",
+    "mode": "chat"
   }
 }

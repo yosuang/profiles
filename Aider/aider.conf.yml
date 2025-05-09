@@ -1,6 +1,6 @@
 #################
 # Model settings:
-model: v3
+model: qwen3
 
 #################
 # Cache settings:
@@ -24,3 +24,4 @@ alias:
   - "v3:openrouter/deepseek/deepseek-chat-v3-0324"
   - "v3f:openrouter/deepseek/deepseek-chat-v3-0324:free"
   - "exp:openrouter/google/gemini-2.5-pro-exp-03-25:free"
+  - "qwen3:openrouter/qwen/qwen3-235b-a22b:free"
