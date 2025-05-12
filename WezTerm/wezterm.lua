@@ -1,25 +1,32 @@
 local wezterm = require("wezterm")
-
 local config = wezterm.config_builder()
 
-config.initial_cols = 96
-config.initial_rows = 24
+wezterm.on("gui-startup", function(cmd)
+	local screen = wezterm.gui.screens().active
+	local ratio = 0.7
+	local width, height = screen.width * ratio, screen.height * ratio
+	local tab, pane, window = wezterm.mux.spawn_window({
+		position = {
+			x = (screen.width - width) / 2,
+			y = (screen.height - height) / 2,
+			origin = "ActiveScreen",
+		},
+	})
+	window:gui_window():set_inner_size(width, height)
+end)
 
--- Fonts
-config.font = wezterm.font("JetBrains Mono", {})
-config.font_size = 13.3
-config.line_height = 1
+config.font = wezterm.font("Maple Mono NF CN", {})
+config.font_size = 13
+config.window_padding = {
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
+}
 
--- Colors
 config.color_scheme = "Tokyo Night"
-
--- 关闭时不进行确认
 config.window_close_confirmation = "NeverPrompt"
--- 透明背景
 config.window_background_opacity = 0.8
--- 取消 Windows 原生标题栏
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
--- 启用滚动条
-config.enable_scroll_bar = true
 
 return config
